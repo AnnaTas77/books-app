@@ -2,7 +2,7 @@ import Favicon from "../public/images/favicon.ico";
 import Navbar from "./components/Navbar";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import { AuthProvider } from "@/app/context/AuthContext";
+import { AuthProvider } from "../app/context/AuthContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
