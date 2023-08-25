@@ -5,7 +5,7 @@
 
 ## Project Description
 
-Books-Buzz is a responsive web application designed to enhance your reading experience by providing tools to organize your reading preferences, discover new books, and engage with a community of book enthusiasts.
+Books-Buzz is a responsive web application that provides tools to organize reading preferences, discover new books, and engage with a community of book enthusiasts. Powered by the Google Books API, it offers advanced features including barcode scanning, voice-activated search, and manual search by title, author, or ISBN.
 
 This project was developed as the final group project of the Northcoders Software Development Bootcamp.
 
