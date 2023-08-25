@@ -45,7 +45,14 @@ const Navbar = () => {
             {user && (
                 <nav className="p-4 relative border-b-2 lg:flex lg:justify-between lg:items-center">
                     <div className="text-slate-100 font-black text-3xl">
-                        <Link href="/" onClick={() => setShowNavbar(false)}>
+                        <Link
+                            href="/"
+                            onClick={() =>
+                                setShowNavbar((prev) => {
+                                    prev = !prev;
+                                })
+                            }
+                        >
                             <Image width={250} src={AppLogo} alt="Books-Buzz" />
                         </Link>
                     </div>
