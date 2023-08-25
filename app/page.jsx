@@ -29,7 +29,6 @@ export default function Home() {
             }
         });
     }, []);
-    console.log(books, "page");
 
     return (
         <main>
@@ -72,7 +71,7 @@ export default function Home() {
                             width="100%"
                             height="625px"
                             allowFullScreen
-                        ></iframe>{" "}
+                        ></iframe>
                         <div
                             style={{
                                 fontFamily: "Sans-Serif",
@@ -82,15 +81,14 @@ export default function Home() {
                                 paddingTop: "5px",
                             }}
                         >
-                            {" "}
-                            powered by{" "}
+                            powered by
                             <a
                                 href="https://www.proxi.co/?utm_source=poweredbyproxi"
                                 style={{ color: "#000000" }}
                                 target="_blank"
                             >
                                 Proxi
-                            </a>{" "}
+                            </a>
                         </div>
                     </section>
                 </section>

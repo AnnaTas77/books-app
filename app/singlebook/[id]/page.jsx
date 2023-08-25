@@ -4,7 +4,7 @@ import React from "react";
 import AltImage from "@/public/images/alt-image.png";
 import Image from "next/image";
 
-import { doc, updateDoc, arrayUnion, arrayRemove, getDoc } from "firebase/firestore";
+import { doc, updateDoc, arrayUnion, getDoc } from "firebase/firestore";
 import { db } from "@/app/firebase/config";
 import { useParams } from "next/navigation";
 import { fetchBookById } from "@/app/api/route";
@@ -150,11 +150,11 @@ function SingleBookPage() {
     };
 
     return (
-        <main>
+        <main className="flex justify-center items-center">
             {error && <p className="text-2xl font-bold text-center mt-96">No books found</p>}
             {loading && !error && <p className="text-2xl font-bold text-center mt-96">Loading...</p>}
             {!loading && (
-                <article className="mt-10 flex justify-center items-center m-auto bg-white rounded-2xl">
+                <article className="mt-10 px-10 flex justify-center items-center max-w-[1200px] m-auto bg-white rounded-2xl">
                     <div className="m-auto p-4 ">
                         <div className="flex justify-center">
                             {singleBook.imageLinks.thumbnail ? (
@@ -187,31 +187,36 @@ function SingleBookPage() {
                                     <span className="font-bold">{bookAdded}</span>
                                 </div>
                             )}
-                            <div className="w-4/5 m-auto p-4">
-                                <button
-                                    className="mb-2 w-full md:w-1/2 bg-blue-800 hover:bg-blue-400 font-black text-center py-3 rounded-full text-white my-1"
-                                    onClick={addToFavourites}
-                                >
-                                    Add to Favourites
-                                </button>
-                                <button
-                                    className="mb-2 w-full md:w-1/2 bg-blue-800 hover:bg-blue-400 font-black text-center py-3 rounded-full text-white my-1"
-                                    onClick={addToCurrentlyReading}
-                                >
-                                    Add to Currently Reading
-                                </button>
-                                <button
-                                    className="mb-2 w-full md:w-1/2 bg-blue-800 hover:bg-blue-400 font-black text-center py-3 rounded-full text-white my-1"
-                                    onClick={saveForLater}
-                                >
-                                    Save for Later
-                                </button>
-                                <button
-                                    className="mb-2 w-full md:w-1/2 bg-blue-800 hover:bg-blue-400 font-black text-center py-3 rounded-full text-white my-1"
-                                    onClick={markAsRead}
-                                >
-                                    Mark as Read
-                                </button>
+                            <div className="flex flex-col justify-center w-4/5 m-auto p-4">
+                                <div className="flex flex-col items-center justify-center self-center md:flex-row gap-4 w-[70%]">
+                                    <button
+                                        className="mb-2 w-full md:w-1/2 bg-blue-800 hover:bg-blue-400 font-black text-center p-3 text-sm md:text-md rounded-full text-white my-1 min-w-[150px]"
+                                        onClick={addToFavourites}
+                                    >
+                                        Add to Favourites
+                                    </button>
+                                    <button
+                                        className="mb-2 w-full md:w-1/2 bg-blue-800 hover:bg-blue-400 font-black text-center p-3 text-sm md:text-md rounded-full text-white my-1 min-w-[150px]"
+                                        onClick={addToCurrentlyReading}
+                                    >
+                                        Add to Currently Reading
+                                    </button>
+                                </div>
+
+                                <div className="flex flex-col justify-center items-center self-center md:flex-row gap-4 w-[70%]">
+                                    <button
+                                        className="mb-2 w-full md:w-1/2 bg-blue-800 hover:bg-blue-400 font-black text-center p-3 text-sm md:text-md rounded-full text-white my-1 min-w-[150px]"
+                                        onClick={saveForLater}
+                                    >
+                                        Save for Later
+                                    </button>
+                                    <button
+                                        className="mb-2 w-full md:w-1/2 bg-blue-800 hover:bg-blue-400 font-black text-center p-3 text-sm md:text-md rounded-full text-white my-1 min-w-[150px]"
+                                        onClick={markAsRead}
+                                    >
+                                        Mark as Read
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
