@@ -1,34 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Books-Buzz Web App
 
-## Getting Started
+[![Watch the Video](./public/images/books-buzz.png)](https://www.youtube.com/watch?v=mYqzc4WjbK4)
+🎬 **Click on the image above to check out the Books-Buzz Presentation Video.** 🎬
 
-First, run the development server:
+## Project Description
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Books-Buzz is a responsive web application designed to enhance your reading experience by providing tools to organize your reading preferences, discover new books, and engage with a community of book enthusiasts.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project was developed as the final group project of the Northcoders Software Development Bootcamp.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Explore Books-Buzz live at: https://books-buzz-app.netlify.app/
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Features
 
-## Learn More
+### Book Tracking and Organization
 
-To learn more about Next.js, take a look at the following resources:
+-   **Profile Creation and Login**: Users can easily create profiles and log in to access their personalized reading experience.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   **Barcode Scanning**: Utilize the convenience of your mobile camera to scan book barcodes while on the go. Scanned books are saved to your profile for future reference.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+-   **Voice-Activated Search**: Use your voice to perform searches within Books-Buzz. If your browser supports it, you can enjoy a hands-free search experience. Simply click the microphone icon and speak the title or author of the book you're looking for.
 
-## Deploy on Vercel
+-   **Manual Search Functionality**: Search for books by manual typing, author, title, or ISBN.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Recommendations and Community Engagement
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-   **New York Times Bestsellers**: Stay updated with the latest New York Times bestsellers, helping you discover books that are trending.
+
+-   **Users Favourites**: Explore the community's favorites and get recommendations based on popular books among other users.
+
+### Interactive Map
+
+-   **Local Bookshops and Libraries**: Discover nearby bookshops and libraries through an interactive map. This feature encourages users to explore local literary resources and expand their reading horizons.
+
+### Detailed Book Pages
+
+-   **Comprehensive Book Details**: Click on book cover thumbnails to access detailed pages for each book, offering information about the book's plot, author, and more.
+
+-   **Book Shelves**: Organize your reading list by categorizing books into different shelves, including:
+    -   Favourites
+    -   Currently Reading
+    -   Save for Later
+    -   Marked as Read
+
+## Technologies Used
+
+-   **Frontend Framework**: Next.js
+-   **Authentication and Database**: Firebase (Firestore)
+-   **API Integration**: Google Books API
+-   **UI Framework and Styling**: Tailwind CSS, CSS
+
+### Experience a new way of engaging with books through the Books-Buzz web app. Happy reading! 📚 ✨
