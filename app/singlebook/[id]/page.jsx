@@ -154,7 +154,7 @@ function SingleBookPage() {
             {error && <p className="text-2xl font-bold text-center mt-96">No books found</p>}
             {loading && !error && <p className="text-2xl font-bold text-center mt-96">Loading...</p>}
             {!loading && (
-                <article className="mt-10 px-10 flex justify-center items-center max-w-[1200px] m-auto bg-white rounded-2xl">
+                <article className="mt-10 px-10 flex w-full justify-center items-center max-w-[1200px] m-auto bg-white rounded-2xl">
                     <div className="m-auto p-4 ">
                         <div className="flex justify-center">
                             {singleBook.imageLinks.thumbnail ? (
@@ -187,7 +187,7 @@ function SingleBookPage() {
                                     <span className="font-bold">{bookAdded}</span>
                                 </div>
                             )}
-                            <div className="flex flex-col justify-center w-4/5 m-auto p-4">
+                            <div className="flex flex-col justify-center w-full m-auto ">
                                 <div className="flex flex-col items-center justify-center self-center md:flex-row gap-4 w-[70%]">
                                     <button
                                         className="mb-2 w-full md:w-1/2 bg-blue-800 hover:bg-blue-400 font-black text-center p-3 text-sm md:text-md rounded-full text-white my-1 min-w-[150px]"

@@ -20,7 +20,6 @@ const Navbar = () => {
 
     const logOut = () => {
         signOut(auth);
-        // setUser(null);
         router.push("/landing-page");
     };
 
