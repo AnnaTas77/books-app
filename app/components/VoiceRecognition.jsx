@@ -26,7 +26,6 @@ export const VoiceRecognition = ({ setSearch }) => {
 
     } else {
       setError(true)
-      alert("Web Speech API is not supported");
     }
 
     return () => {
@@ -52,6 +51,6 @@ export const VoiceRecognition = ({ setSearch }) => {
         <IoMicCircleSharp className=" text-6xl rounded-full bg-slate-800 hover:bg-blue-500 p-2 " />
       </button>
     // </div>
-  ) : (alert('Browser does not support microphone input.'))
+  ) : (alert('Web Speech API is not supported.'))
 }
 };

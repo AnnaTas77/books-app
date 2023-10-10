@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
-import { app } from "../firebase/config";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase/config";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase/config";
 import { useRouter } from "next/navigation";
@@ -9,8 +9,6 @@ import Link from "next/link";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { onAuthStateChanged } from "firebase/auth";
-
-const auth = getAuth(app);
 
 const LoginPage = () => {
     const { user, setUser } = useContext(AuthContext);
@@ -27,6 +25,12 @@ const LoginPage = () => {
             setUser(currentUser);
         });
     }, []);
+
+    useEffect(() => {
+        if (user) {
+            router.push("/");
+        }
+    }, [user]);
 
     const handleChange = (event) => {
         setLoginData((previousData) => {
@@ -60,7 +64,6 @@ const LoginPage = () => {
 
     return (
         <div className="landing__page max-w-lg mx-auto flex-1 flex flex-col items-center justify-center px-2">
-            {user && router.push("/")}
             {!user && (
                 <form onSubmit={handleSubmit} className="border px-6 py-8 rounded shadow-md text-white w-full">
                     <h1 className="mb-6 text-3xl text-center">Login</h1>

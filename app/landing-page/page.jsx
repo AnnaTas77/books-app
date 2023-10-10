@@ -17,9 +17,14 @@ const LandingPage = () => {
         });
     }, []);
 
+    useEffect(() => {
+        if (user) {
+            router.push("/");
+        }
+    }, [user]);
+
     return (
         <main className="landing__page ">
-            {user && router.push("/")}
             {!user && (
                 <section className="rounded-2xl border-4 border-white text-white  flex justify-center items-center flex-col p-4 m-auto">
                     <h1 className="uppercase font-black text-4xl mb-4 text-center">Welcome to Books-Buzz</h1>

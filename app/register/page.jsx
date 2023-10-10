@@ -12,6 +12,7 @@ import { onAuthStateChanged } from "firebase/auth";
 const auth = getAuth(app);
 
 const RegisterPage = () => {
+    let router = useRouter();
     const { user, setUser } = useContext(AuthContext);
     const [formData, setFormData] = useState({
         fullName: "",
@@ -21,12 +22,19 @@ const RegisterPage = () => {
     });
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+
     useEffect(() => {
         onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser);
         });
     }, []);
-    console.log(user);
+
+    useEffect(() => {
+        if (user) {
+            router.push("/");
+        }
+    }, [user]);
+
     const handleChange = (event) => {
         setFormData((previousFormData) => {
             const { name, value } = event.target;
@@ -36,8 +44,6 @@ const RegisterPage = () => {
             };
         });
     };
-
-    let router = useRouter();
 
     const sendData = async (userID) => {
         try {
@@ -88,7 +94,6 @@ const RegisterPage = () => {
 
     return (
         <div className="landing__page max-w-lg mx-auto flex-1 flex flex-col items-center justify-center px-2">
-            {user && router.push("/")}
             <form onSubmit={handleSubmit} className="border px-6 py-8 rounded shadow-md text-white w-full">
                 <h1 className="mb-6 text-3xl text-center">Register</h1>
                 {error && (

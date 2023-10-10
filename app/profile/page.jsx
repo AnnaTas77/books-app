@@ -25,9 +25,11 @@ function Profile() {
             }
         });
     }, []);
+
     useEffect(() => {
         setLoading(false);
     }, []);
+    
     return (
         <div>
             {loading && <p className="text-2xl font-bold text-center mt-96">Loading...</p>}

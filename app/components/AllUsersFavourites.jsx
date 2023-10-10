@@ -67,7 +67,7 @@ function AllUsersFavourites() {
                         );
                     })
                 ) : (
-                    <p> No Favourites to show</p>
+                    <p className="flex w-full justify-center"> No Favourites to show</p>
                 )}
             </div>
         </div>
